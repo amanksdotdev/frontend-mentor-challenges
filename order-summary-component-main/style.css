@@ -129,7 +129,8 @@ p {
 @media (min-width: 400px) {
     body {
         background: url('./images/pattern-background-desktop.svg');
-        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
         background-color: var(--primary-pale-blue);
 
     }
