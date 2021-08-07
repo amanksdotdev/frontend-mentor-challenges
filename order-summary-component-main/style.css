@@ -1,0 +1,140 @@
+:root {
+    --primary-pale-blue: hsl(225, 100%, 94%);
+    --primary-bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(250, 60%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: url(./images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--primary-pale-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 1rem;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+p {
+    color: #888;
+    line-height: 1.6rem;
+}
+
+.card {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.card__container {
+    padding: 0 0.8rem;
+    border-radius: inherit;
+}
+
+.card__hero {
+    order: -1;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.card__title {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    font-weight: 900;
+}
+
+.card__plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--very-pale-blue);
+    margin-bottom: 1rem;
+    border-radius: inherit;
+    padding: 0.3rem 1rem;
+}
+
+.plan__icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+}
+
+.plan__description {
+    display: flex;
+    align-items: center;
+}
+
+.plan__title {
+    margin-bottom: 0;
+}
+.plan__description p {
+    margin-top: 0;
+}
+.plan__change-btn {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--primary-bright-blue);
+    font-size: 0.8rem;
+}
+
+.plan__change-btn:hover {
+    text-decoration: none;
+    color: var(--desaturated-blue);
+}
+
+.card__submit-btn {
+    background: var(--primary-bright-blue);
+    border: 0;
+    color: white;
+    padding: 1rem 2.5rem;
+    min-width: 100%;
+    font-size: 1rem;
+    font-weight: 900;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    cursor: pointer;
+}
+
+.card__submit-btn:hover,
+.card__submit-btn:focus {
+    background-color: var(--desaturated-blue);
+}
+
+.card__cancel-btn {
+    margin-bottom: 2rem;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.card__cancel-btn:hover,
+.card__cancel-btn:focus {
+    color: var(--dark-blue);
+}
+
+@media (min-width: 400px) {
+    body {
+        background: url('./images/pattern-background-desktop.svg');
+        background-size: cover;
+        background-color: var(--primary-pale-blue);
+
+    }
+
+    .card__container {
+        padding: 0 2rem;
+    }
+}
